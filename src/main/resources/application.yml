@@ -1,0 +1,26 @@
+server:
+  port: 8080 # ?? ?? ????
+
+spring:
+  # H2 Database ??
+  datasource:
+    driver-class-name: org.h2.Driver
+#    url: 'jdbc:h2:mem:test'   # H2 DB ?? ?? (In-Memory Mode)
+    url: 'jdbc:h2:~/test;MODE=MYSQL'    # H2 DB ?? ?? (Embedded Mode)
+    username: sa        # H2 DB ?? ID (??? ??)
+    password: 1234       # H2 DB ?? PW (??? ??)
+
+  jpa:
+    open-in-view: false
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+
+  h2:
+    console:
+      enabled: true
