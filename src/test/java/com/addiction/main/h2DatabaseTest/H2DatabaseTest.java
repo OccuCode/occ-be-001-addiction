@@ -20,7 +20,7 @@ public class H2DatabaseTest {
     void beforeInsertMemberBefore() {
         List<MemberDto> memberList = new ArrayList<>();
 
-        for (int i = 0; i <= 5; i++) {
+        for (int i = 1; i <= 5; i++) {
             MemberDto memberDto = new MemberDto();
 
             memberDto.setMemberId("testId" + i);
